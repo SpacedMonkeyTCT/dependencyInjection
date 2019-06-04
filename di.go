@@ -1,7 +1,11 @@
-package make
+package main
 
-import "bytes"
+import (
+	"bytes"
+	"fmt"
+)
 
-func Greet(buffer *bytes.Buffer, name string) {
-
+// Greet ...
+func Greet(writer *bytes.Buffer, name string) {
+	fmt.Fprintf(writer, "Hello, %s", name)
 }
